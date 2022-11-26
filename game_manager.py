@@ -1,5 +1,4 @@
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
+from constants import *
 
 
 class Player:
@@ -26,7 +25,7 @@ class GameManager:
         self.__turn = 0
 
     def change_turn(self):
-        if self.__turn+1 == len(self.__players):
+        if self.__turn + 1 == len(self.__players):
             self.__turn = 0
         else:
             self.__turn += 1

@@ -1,26 +1,8 @@
 import sys
-import pygame
 from map import Map
 from game_manager import *
 from user_interface import *
-
-# Game values
-GAME_NAME = "Four in row"
-WIDTH = 720
-HEIGHT = 720
-COUNT_OF_ROWS = 6
-COUNT_OF_COLUMNS = 6
-FPS = 60
-SCREEN_COLOR = (234, 255, 208)
-
-# Pet values
-
-# Forces
-
-# Ways for files
-
-# UI
-
+from constants import *
 
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -29,10 +11,11 @@ clock = pygame.time.Clock()
 
 player_1 = Player("Ayur", (0, 255, 0))
 player_2 = Player("Ivan", (255, 0, 0))
+player_3 = Player("Vadim", (0, 0, 255))
 
 text = Text(screen, "", (WIDTH//2, HEIGHT//2), 50, player_1.get_color)
 
-game_manager = GameManager((player_1, player_2), 4, text)
+game_manager = GameManager((player_1, player_2, player_3), 4, text, False)
 game_map = Map(screen, (COUNT_OF_ROWS, COUNT_OF_COLUMNS))
 
 game_manager.start_game()

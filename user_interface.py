@@ -1,7 +1,6 @@
 import pygame
+from constants import *
 
-WHITE = (255, 255, 255)
-BLACK = (0, 0, 0)
 
 class Text:
     def __init__(self, screen, text,  cord, size, color, back_color=WHITE, font_way=None):
