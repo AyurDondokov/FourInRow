@@ -3,7 +3,7 @@ from constants import *
 
 
 class Text:
-    def __init__(self, screen, text,  cord, size, color, back_color=WHITE, font_way=None):
+    def __init__(self, screen, text,  cord, size, color, back_color=COLORS["white"], font_way=None):
         self.__screen = screen
         self.__color = color
         self.__back_color = back_color

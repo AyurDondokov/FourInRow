@@ -43,7 +43,7 @@ class GameManager:
             text_color = player_winner.get_color
         else:
             text_output = "Ничья"
-            text_color = BLACK
+            text_color = COLORS["black"]
             print(text_output)
         if self.__ui_text:
             self.__ui_text.change_color(text_color)

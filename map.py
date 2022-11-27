@@ -2,6 +2,7 @@ import time
 from constants import *
 import pygame.draw
 
+
 class Block:
     def __init__(self, screen, pos, color=STANDARD_BLOCK_COLOR,
                  size=(WIDTH / COUNT_OF_COLUMNS, HEIGHT / COUNT_OF_ROWS)):

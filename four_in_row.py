@@ -9,13 +9,13 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption(GAME_NAME)
 clock = pygame.time.Clock()
 
-player_1 = Player("Ayur", (0, 255, 0))
-player_2 = Player("Ivan", (255, 0, 0))
-player_3 = Player("Vadim", (0, 0, 255))
+player_1 = Player("Ayur", COLORS["green"])
+player_2 = Player("Ivan", COLORS["red"])
+player_3 = Player("Vadim", COLORS["blue"])
 
-text = Text(screen, "", (WIDTH//2, HEIGHT//2), 50, player_1.get_color)
+text = Text(screen, "", (WIDTH//2, HEIGHT//2), TEXT_SIZE, player_1.get_color)
 
-game_manager = GameManager((player_1, player_2, player_3), 4, text, False)
+game_manager = GameManager((player_1, player_2, player_3), COUNT_BLOCKS_FOR_WIN, text, False)
 game_map = Map(screen, (COUNT_OF_ROWS, COUNT_OF_COLUMNS))
 
 game_manager.start_game()
